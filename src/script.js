@@ -2,6 +2,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import {Pane} from 'tweakpane';
 import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+
 const PARAMS = {
     visible: false,
     checkVisible: () => {
@@ -184,6 +186,27 @@ spotLightHelper.visible = false
 const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
 scene.add(rectAreaLightHelper)
 rectAreaLightHelper.visible = false
+
+/**
+ * Models
+ */
+const gltfLoader = new GLTFLoader();
+// gltfLoader.load('/static/models/Duck/glTF/Duck.gltf', (gltf) => {
+//     scene.add(gltf.scene)
+//     console.log(gltf)
+
+// })
+gltfLoader.load(
+    '/models/viking_axe/scene.gltf',
+    (gltf) =>
+    {
+    console.log(gltf)
+    gltf.scene.children[0].scale.set(0.015,0.015,0.015)
+
+
+    scene.add(gltf.scene.children[0])
+})
+
 /**
  * Objects
  */
