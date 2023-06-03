@@ -220,19 +220,20 @@ const normal = textureLoader.load('/textures/Snow-Texture/Snow_001_NORM.jpg');
 const occ = textureLoader.load('/textures/Snow-Texture/Snow_001_OCC.jpg');
 const rough = textureLoader.load('/textures/Snow-Texture/Snow_001_ROUGH.jpg');
 
+
 const geometry = new THREE.BoxGeometry( 10, 0.5, 10 ); 
 const material = new THREE.MeshStandardMaterial(
     { 
         map: color,
         normalMap: normal,
         displacementMap: disp,
-        displacementScale: 0.05,
+        displacementScale: 0,
         roughnessMap: rough,
-        roughness: 0.5,
-        aoMap: occ
+        roughness: 0.3,
+        aoMap: occ,
 
     });
-
+    
 const cube = new THREE.Mesh( geometry, material );
 
 scene.add( cube );
