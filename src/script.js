@@ -191,41 +191,51 @@ rectAreaLightHelper.visible = false
  * Models
  */
 const gltfLoader = new GLTFLoader();
+const gltfLoader1 = new GLTFLoader();
 // gltfLoader.load('/static/models/Duck/glTF/Duck.gltf', (gltf) => {
 //     scene.add(gltf.scene)
 //     console.log(gltf)
 
 // })
 gltfLoader.load(
-    '/models/viking_axe/scene.gltf',
+    '/models/GOW-leviathan-axe/scene.gltf',
     (gltf) =>
     {
     console.log(gltf)
-    gltf.scene.children[0].scale.set(0.015,0.015,0.015)
+    // gltf.scene.children[0].scale.set(0.015,0.015,0.015)
 
 
     scene.add(gltf.scene.children[0])
 })
 
+
 /**
  * Objects
  */
 // Material
-const material = new THREE.MeshStandardMaterial()
-material.roughness = 0.4
+const textureLoader = new THREE.TextureLoader();
+const color = textureLoader.load('/textures/Snow-Texture/Snow_001_COLOR.jpg');
+const disp = textureLoader.load('/textures/Snow-Texture/Snow_001_DISP.png');
+const normal = textureLoader.load('/textures/Snow-Texture/Snow_001_NORM.jpg');
+const occ = textureLoader.load('/textures/Snow-Texture/Snow_001_OCC.jpg');
+const rough = textureLoader.load('/textures/Snow-Texture/Snow_001_ROUGH.jpg');
 
-// Objects
+const geometry = new THREE.BoxGeometry( 10, 0.5, 10 ); 
+const material = new THREE.MeshStandardMaterial(
+    { 
+        map: color,
+        normalMap: normal,
+        displacementMap: disp,
+        displacementScale: 0.05,
+        roughnessMap: rough,
+        roughness: 0.5,
+        aoMap: occ
 
-const plane = new THREE.Mesh(
-    new THREE.PlaneGeometry(10, 10),
-    material
-)
-plane.rotation.x = - Math.PI * 0.5
-plane.position.y = - 0.65
-plane.receiveShadow = true
+    });
 
+const cube = new THREE.Mesh( geometry, material );
 
-scene.add(plane)
+scene.add( cube );
 
 /**
  * Sizes
