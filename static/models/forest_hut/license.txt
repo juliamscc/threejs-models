@@ -1,0 +1,11 @@
+Model Information:
+* title:	Forest Hut
+* source:	https://sketchfab.com/3d-models/forest-hut-e17b4bbf60e24d27beb4c0e69e3e4768
+* author:	ScanMe (https://sketchfab.com/ScanMe)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Forest Hut" (https://sketchfab.com/3d-models/forest-hut-e17b4bbf60e24d27beb4c0e69e3e4768) by ScanMe (https://sketchfab.com/ScanMe) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
