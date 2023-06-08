@@ -190,28 +190,142 @@ rectAreaLightHelper.visible = false
 /**
  * Models
  */
+
 const gltfLoader = new GLTFLoader();
-const gltfLoader1 = new GLTFLoader();
 // gltfLoader.load('/static/models/Duck/glTF/Duck.gltf', (gltf) => {
 //     scene.add(gltf.scene)
 //     console.log(gltf)
 
 // })
+
+//Machado
 gltfLoader.load(
     '/models/GOW-leviathan-axe/scene.gltf',
-    (gltf) =>
-    {
-    console.log(gltf)
-    // gltf.scene.children[0].scale.set(0.015,0.015,0.015)
+    (gltf) => {
 
+    gltf.scene.children[0].position.set(4,4,0),
+    scene.add(gltf.scene.children[0])
+
+})
+
+//Cabana
+gltfLoader.load(
+    '/models/forest_hut/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].position.set(0,1,0),
+    gltf.scene.children[0].rotation.set(29.90,0,0),
+    scene.add(gltf.scene.children[0])
+
+})
+
+//Rocha com neve
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2,0,0),
 
     scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2.2,0,0.5),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2.2,0,1),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2,0,1.7),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2,0,-2),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2,0,-1.5),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+gltfLoader.load(
+    '/models/snowy-rock/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(2,0,-1),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+//Arvore
+gltfLoader.load(
+    '/models/snow_covered_deadwood/scene.gltf',
+    (gltf) => {
+
+    // gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(3,-0.8,-3),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+//Tronco
+gltfLoader.load(
+    '/models/snow_covered_logs/scene.gltf',
+    (gltf) => {
+
+    // gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
+    gltf.scene.children[0].position.set(3,3,3),
+
+    scene.add(gltf.scene.children[0])
+
 })
 
 
 /**
  * Objects
  */
+
 // Material
 const textureLoader = new THREE.TextureLoader();
 const color = textureLoader.load('/textures/Snow-Texture/Snow_001_COLOR.jpg');
@@ -221,7 +335,7 @@ const occ = textureLoader.load('/textures/Snow-Texture/Snow_001_OCC.jpg');
 const rough = textureLoader.load('/textures/Snow-Texture/Snow_001_ROUGH.jpg');
 
 
-const geometry = new THREE.BoxGeometry( 10, 0.5, 10 ); 
+const geometry = new THREE.BoxGeometry( 10, 2, 10 ); 
 const material = new THREE.MeshStandardMaterial(
     { 
         map: color,
@@ -237,6 +351,8 @@ const material = new THREE.MeshStandardMaterial(
 const cube = new THREE.Mesh( geometry, material );
 
 scene.add( cube );
+
+cube.position.y = -0.8;
 
 /**
  * Sizes
