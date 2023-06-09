@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import {Pane} from 'tweakpane';
 import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper.js'
@@ -192,6 +193,8 @@ rectAreaLightHelper.visible = false
  */
 
 const gltfLoader = new GLTFLoader();
+const gltfLoaderThunder = new GLTFLoader();
+
 // gltfLoader.load('/static/models/Duck/glTF/Duck.gltf', (gltf) => {
 //     scene.add(gltf.scene)
 //     console.log(gltf)
@@ -203,7 +206,8 @@ gltfLoader.load(
     '/models/GOW-leviathan-axe/scene.gltf',
     (gltf) => {
 
-    gltf.scene.children[0].position.set(4,4,0),
+    gltf.scene.children[0].position.set(3,0.8,2),
+    gltf.scene.children[0].rotation.set(-1.5,-2,0),
     scene.add(gltf.scene.children[0])
 
 })
@@ -315,12 +319,45 @@ gltfLoader.load(
     (gltf) => {
 
     // gltf.scene.children[0].scale.set(0.001,0.0010,0.001),
-    gltf.scene.children[0].position.set(3,3,3),
+    gltf.scene.children[0].position.set(3,1.5,3),
 
     scene.add(gltf.scene.children[0])
 
 })
 
+//Dragão
+gltfLoader.load(
+    '/models/demon_dragon/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(10,10,10),
+    gltf.scene.children[0].position.set(3,5,3),
+
+    scene.add(gltf.scene.children[0])
+
+})
+
+// let animatedObject;
+
+//Raios
+gltfLoaderThunder.load(
+    '/models/3_pack_of_storm_lightning/scene.gltf',
+    (gltf) => {
+
+    gltf.scene.children[0].scale.set(5,5,5),
+    gltf.scene.children[0].position.set(3,3,-3.5),
+
+    scene.add(gltf.scene.children[0])
+    
+})
+
+// gltf.scene.traverse(function (child) {
+//     if (child.isMesh) {
+//       animatedObject = child;
+//     }
+//   });  
+
+// gsap.to(animatedObject.position, { duration: 1, x: 10 })
 
 /**
  * Objects
