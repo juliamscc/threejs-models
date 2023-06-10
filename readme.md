@@ -21,7 +21,7 @@
 - [x] Permitir o redimensionamento da tela e fullscreen (10% da nota)
 - [x] Presença de no mínimo 3 fontes luminosas (além da ambiente) (10% da nota)
 - [ ] Presença de sombras (10% da nota)
-- [ ] Hospedagem do cenário no vercel e envio do repositório no github (10% da nota)
+- [x] Hospedagem do cenário no vercel e envio do repositório no github (10% da nota)
 
 ## 💻 Pré-requisitos
 
