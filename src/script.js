@@ -96,7 +96,7 @@ pane.addInput(directionalLight,"visible",{
 
 const hemisphereLight = new THREE.HemisphereLight(0xff0000, 0x0000ff, 0.3)
 scene.add(hemisphereLight)
-hemisphereLight.visible = false
+hemisphereLight.visible = true
 pane.addInput(hemisphereLight,"visible",{
     "label": "luz hemisphere",
 }).on("change",(ev)=>{
@@ -106,7 +106,7 @@ pane.addInput(hemisphereLight,"visible",{
 const pointLight = new THREE.PointLight(0xff9000, 0.5)
 pointLight.position.set(1, 1, 1)
 scene.add(pointLight)
-pointLight.visible = false
+pointLight.visible = true
 pointLight.castShadow = true
 pointLight.shadow.mapSize.width = 1024
 pointLight.shadow.mapSize.height = 1024
