@@ -21,7 +21,7 @@
 - [x] Permitir o redimensionamento da tela e fullscreen (10% da nota)
 - [x] Presença de no mínimo 3 fontes luminosas (além da ambiente) (10% da nota)
 - [ ] Presença de sombras (10% da nota)
-- [ ] Hospedagem do cenário no vercel e envio do repositório no github (10% da nota)
+- [x] Hospedagem do cenário no vercel e envio do repositório no github (10% da nota)
 
 ## 💻 Pré-requisitos
 
@@ -83,4 +83,5 @@ npm run dev
 * [Tronco de madeira](https://sketchfab.com/3d-models/snow-covered-logs-d058e451a1a846c69d03b499506b31ac#download)
 * [Tronco morto](https://sketchfab.com/3d-models/snow-covered-deadwood-269e5c5fd2bf44f48f180f76d2d77439)
 * [Textura de neve](https://3dtextures.me/2018/02/26/snow-001/)
+* [Música Tema](https://www.youtube.com/watch?v=NSHR5lolVsc&ab_channel=IvanDuch)
 
