@@ -325,40 +325,6 @@ gltfLoader.load(
 
 })
 
-//Dragão
-gltfLoader.load(
-    '/models/demon_dragon/scene.gltf',
-    (gltf) => {
-
-    gltf.scene.children[0].scale.set(10,10,10),
-    gltf.scene.children[0].position.set(3,5,3),
-
-    scene.add(gltf.scene.children[0])
-
-})
-
-// let animatedObject;
-
-//Raios
-gltfLoaderThunder.load(
-    '/models/3_pack_of_storm_lightning/scene.gltf',
-    (gltf) => {
-
-    gltf.scene.children[0].scale.set(5,5,5),
-    gltf.scene.children[0].position.set(3,3,-3.5),
-
-    scene.add(gltf.scene.children[0])
-    
-})
-
-// gltf.scene.traverse(function (child) {
-//     if (child.isMesh) {
-//       animatedObject = child;
-//     }
-//   });  
-
-// gsap.to(animatedObject.position, { duration: 1, x: 10 })
-
 /**
  * Objects
  */
