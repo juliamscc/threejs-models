@@ -47,7 +47,7 @@ Utilize o mouse para mover e dar zoom. Na direita você verá uma caixa de contr
 
 <table>
   <tr>
-    <td align="center">
+    <td vertical-align="middle">
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/116119526?v=4" width="100px;" alt="João"/><br>
         <sub>
@@ -55,8 +55,8 @@ Utilize o mouse para mover e dar zoom. Na direita você verá uma caixa de contr
         </sub>
       </a>
     </td>
-    
-    <td align="center">
+  </tr>
+    <td  vertical-align="middle">
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/66495320?v=4" width="100px;" alt="Júlia"/><br>
         <sub>
