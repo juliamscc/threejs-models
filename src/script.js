@@ -12,8 +12,8 @@ const PARAMS = {
             hemisphereLightHelper.visible = true == hemisphereLight.visible 
             directionalLightHelper.visible = true  == directionalLight.visible
             pointLightHelper.visible = true == pointLight.visible
-            spotLightHelper.visible = true == spotLight.visible
-            rectAreaLightHelper.visible = true == rectAreaLight.visible
+            // spotLightHelper.visible = true == spotLight.visible
+            // rectAreaLightHelper.visible = true == rectAreaLight.visible
         }
     },
     visibleLightHelper: () => {
@@ -21,14 +21,14 @@ const PARAMS = {
             hemisphereLightHelper.visible = true == hemisphereLight.visible 
             directionalLightHelper.visible = true  == directionalLight.visible
             pointLightHelper.visible = true == pointLight.visible
-            spotLightHelper.visible = true == spotLight.visible
-            rectAreaLightHelper.visible = true == rectAreaLight.visible
+            // spotLightHelper.visible = true == spotLight.visible
+            // rectAreaLightHelper.visible = true == rectAreaLight.visible
         }else{
             hemisphereLightHelper.visible = false    
             directionalLightHelper.visible = false  
             pointLightHelper.visible = false
-            spotLightHelper.visible = false
-            rectAreaLightHelper.visible = false
+            // spotLightHelper.visible = false
+            // rectAreaLightHelper.visible = false
         }
         
     },
@@ -124,44 +124,44 @@ pane.addInput(pointLight,"visible",{
     PARAMS.checkVisible()
 })
 
-const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
-rectAreaLight.position.set(-1.5, 0, 1.5)
-rectAreaLight.lookAt(new THREE.Vector3())
-scene.add(rectAreaLight)
+// const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
+// rectAreaLight.position.set(-1.5, 0, 1.5)
+// rectAreaLight.lookAt(new THREE.Vector3())
+// scene.add(rectAreaLight)
 
-rectAreaLight.visible = false
-pane.addInput(rectAreaLight,"visible",{
-    "label": "luz area",
-}).on("change",(ev)=>{
-    PARAMS.checkVisible()
-})
+// rectAreaLight.visible = false
+// pane.addInput(rectAreaLight,"visible",{
+//     "label": "luz area",
+// }).on("change",(ev)=>{
+//     PARAMS.checkVisible()
+// })
 
-const spotLight = new THREE.SpotLight(0x78ff00, 0.5, 10, Math.PI * 0.1, 0.25, 1)
-spotLight.position.set(0, 2, 3)
-spotLight.target.position.x = -0.75
-scene.add(spotLight.target)
-scene.add(spotLight)
+// const spotLight = new THREE.SpotLight(0x78ff00, 0.5, 10, Math.PI * 0.1, 0.25, 1)
+// spotLight.position.set(0, 2, 3)
+// spotLight.target.position.x = -0.75
+// scene.add(spotLight.target)
+// scene.add(spotLight)
 
-spotLight.visible = false
-spotLight.castShadow = true
-spotLight.shadow.mapSize.width = 1024
-spotLight.shadow.mapSize.height = 1024
-spotLight.shadow.camera.fov = 35
-spotLight.shadow.camera.near = 2
-spotLight.shadow.camera.far = 7
-
-
-const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera)
-scene.add(spotLightCameraHelper)
-spotLightCameraHelper.visible = false
+// spotLight.visible = false
+// spotLight.castShadow = true
+// spotLight.shadow.mapSize.width = 1024
+// spotLight.shadow.mapSize.height = 1024
+// spotLight.shadow.camera.fov = 35
+// spotLight.shadow.camera.near = 2
+// spotLight.shadow.camera.far = 7
 
 
+// const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera)
+// scene.add(spotLightCameraHelper)
+// spotLightCameraHelper.visible = false
 
-pane.addInput(spotLight,"visible",{
-    "label": "luz spot",
-}).on("change",(ev)=>{
-    PARAMS.checkVisible()
-})
+
+
+// pane.addInput(spotLight,"visible",{
+//     "label": "luz spot",
+// }).on("change",(ev)=>{
+//     PARAMS.checkVisible()
+// })
 /** 
  * Helpers
  */
@@ -180,13 +180,13 @@ scene.add(pointLightHelper)
 pointLightHelper.visible = false
 
 
-const spotLightHelper = new THREE.SpotLightHelper(spotLight)
-scene.add(spotLightHelper)
-spotLightHelper.visible = false
+// const spotLightHelper = new THREE.SpotLightHelper(spotLight)
+// scene.add(spotLightHelper)
+// spotLightHelper.visible = false
 
-const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
-scene.add(rectAreaLightHelper)
-rectAreaLightHelper.visible = false
+// const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
+// scene.add(rectAreaLightHelper)
+// rectAreaLightHelper.visible = false
 
 /**
  * Models
